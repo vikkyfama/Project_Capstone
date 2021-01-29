@@ -134,6 +134,7 @@ Accuracy result for my LogisticRegression Model was 0.9633333333333334 with the 
  2. We could also try to change the earlyTerminationPolicy to the Truncation selection policy which will periodically cancel a given percentage of runs that rank the lowest for their performance on the primary metric. This policy strives for fairness in ranking the runs by accounting for improving model performance with training time. When ranking a relatively young run, the policy uses the corresponding (and earlier) performance of older runs for comparison. Therefore, runs aren't terminated for having a lower performance because they have run for less time than other runs.
 
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+![](https://github.com/vikkyfama/Project_Capstone/blob/toribranch/Final_Project/HyperdriveFinalRunDetailsWidget.png)
 
 ## Model Deployment
 *TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
