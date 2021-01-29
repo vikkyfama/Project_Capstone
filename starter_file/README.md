@@ -101,6 +101,7 @@ n_jobs : int, optional (default=1)
 The number of jobs to run in parallel for fit. If -1, then the number of jobs is set to the number of cores.
 
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+![](https://github.com/vikkyfama/Project_Capstone/blob/toribranch/Final_Project/AutoMLFinalRunDetailsWidget.png)
 
 
 ## Hyperparameter Tuning
