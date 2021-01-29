@@ -43,15 +43,92 @@ For the AutoML Configuration, I chose the classification task because i am tryin
 
 ### Results
 *TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
+In this autoML experiment we found out VotingEnsemble to be the best model based on the AUC_Weighted metric. The AUC_Weighted score for this models was 0.99541.Other metrics scores are as follows:
+Accuracy
+0.98667
+AUC macro
+0.99541
+AUC micro
+0.99866
+AUC weighted
+0.99541
+Average precision score macro
+0.98645
+Average precision score micro
+0.99869
+Average precision score weighted
+0.99715
+Balanced accuracy
+0.93978
+F1 score macro
+0.95803
+F1 score micro
+0.98667
+F1 score weighted
+0.98631
+Log loss
+0.065460
+Matthews correlation
+0.91839
+Norm macro recall
+0.87955
+Precision score macro
+0.98021
+Precision score micro
+0.98667
+Precision score weighted
+0.98674
+Recall score macro
+0.93978
+Recall score micro
+0.98667
+Recall score weighted
+0.98667
+Weighted accuracy
+0.99615
+
+Parameters:	
+estimators : list of (string, estimator) tuples
+Invoking the fit method on the VotingClassifier will fit clones of those original estimators that will be stored in the class attribute self.estimators_.
+
+voting : str, {‘hard’, ‘soft’} (default=’hard’)
+Else if ‘soft’, predicts the class label based on the argmax of the sums of the predicted probabilities, which is recommended for an ensemble of well-calibrated classifiers.
+
+weights : array-like, shape = [n_classifiers], optional (default=`None`)
+Sequence of weights (float or int) to weight the occurrences of predicted class labels (hard voting) or class probabilities before averaging (soft voting). Uses uniform weights if None.
+
+n_jobs : int, optional (default=1)
+The number of jobs to run in parallel for fit. If -1, then the number of jobs is set to the number of cores.
 
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
 ## Hyperparameter Tuning
 *TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
+The model chosen for this experiment was the SKLearn LogisticRegression Algorithm. This class implements regularized logistic regression using the ‘lbfgs’ solvers. With regularization being applied by default. I chose this particular model because it can handle both dense and sparse input by using C-ordered arrays or CSR matrices containing 64-bit floats for optimal performance.
+For the early_termination_policy, The BanditPolicy was used, this defines an early termination policy based on slack criteria, and a frequency and delay interval for evaluation.
+The slack_factor with a value of 0.4 simply signifies that any run that doesn't fall within this slack factor value of the evaluation metric with respect to the best performing run will be terminated.
+The parameter sampler used in this experiment was the RandomParameterSampling. In this sampling, parameter values are chosen from a set of discrete values or a distribution over a continuous range. For this experiment the ranges of the values are as follows;
+"learning_rate": The learning rate is a tuning parameter in an optimization algorithm that determines the step size at each iteration while moving toward a minimum of a loss function. 
+normal(10, 3)-  Returns a real value that's normally distributed with mean mu and standard deviation sigma. 
+
+"keep_probability": This will be the probability with which we will keep each node. 
+uniform(0.05, 0.1) - Returns a value uniformly distributed between 0.05 and 0.1.
+
+"--C": Inverse of regularization strength; must be a positive float. Like in support vector machines, smaller values specify stronger regularization. 
+uniform(0.02, 1)- Returns a value uniformly distributed between 0.02 and 1
+
+"--max_iter": Maximum number of iterations taken for the solvers to converge. 
+choice(50, 1000, 1500)- Specifies a discrete set of options (500, 1000, 1500) to sample from.
 
 
 ### Results
 *TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
+Accuracy result for my LogisticRegression Model was 0.9633333333333334 with the following hyperparameter values;
+ Regularization Strength: 1.0
+ 
+### Improvements
+ 1.  By replacing the randomparametersampling with Bayesian sampling which tries to intelligently pick the next sample of hyperparameters, based on how the previous samples performed, such that the new sample improves the reported primary metric.
+ 2. We could also try to change the earlyTerminationPolicy to the Truncation selection policy which will periodically cancel a given percentage of runs that rank the lowest for their performance on the primary metric. This policy strives for fairness in ranking the runs by accounting for improving model performance with training time. When ranking a relatively young run, the policy uses the corresponding (and earlier) performance of older runs for comparison. Therefore, runs aren't terminated for having a lower performance because they have run for less time than other runs.
 
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
