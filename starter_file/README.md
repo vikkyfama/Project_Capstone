@@ -103,6 +103,7 @@ The number of jobs to run in parallel for fit. If -1, then the number of jobs is
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 ![](https://github.com/vikkyfama/Project_Capstone/blob/toribranch/Final_Project/AutoMLFinalRunDetailsWidget.png)
 ![](https://github.com/vikkyfama/Project_Capstone/blob/toribranch/Final_Project/AutoMLFinalRunDetailsWidget2.png)
+![](https://github.com/vikkyfama/Project_Capstone/blob/toribranch/Final_Project/AutoMLFinalRunDetailsWidget3.png)
 
 ## Hyperparameter Tuning
 *TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
