@@ -102,6 +102,7 @@ The number of jobs to run in parallel for fit. If -1, then the number of jobs is
 
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
+
 ## Hyperparameter Tuning
 *TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
 The model chosen for this experiment was the SKLearn LogisticRegression Algorithm. This class implements regularized logistic regression using the ‘lbfgs’ solvers. With regularization being applied by default. I chose this particular model because it can handle both dense and sparse input by using C-ordered arrays or CSR matrices containing 64-bit floats for optimal performance.
