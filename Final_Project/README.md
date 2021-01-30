@@ -11,17 +11,75 @@ The department wants to build a model that will help them identify the potential
 
 
 Content
-Column Descriptions: 
-ID = Customer ID, Age = Customer's age in completed years, Experience = years of professional experience, Income = Annual income of the customer ($000), ZIPCode = Home Address ZIP code, Family = Family size of the customer, CCAvg = Avg. spending on credit cards per month ($000), Education = Education Level (1: Undergrad; 2: Graduate; 3: Advanced/Professional), Mortgage = Value of house mortgage if any ($000), Personal Loan = Did this customer accept the personal loan offered in the last campaign?, Securities Account = Does the customer have a security account with the bank?, CD Account = Does the customer have a certificate of deposit (CD) account with the bank?, Online =  Does the customer use internet banking facilities?, CreditCard = Does the customer uses a credit card issued by UniversalBank.
+<table>
+ <thead>
+  <td>Column</td>
+  <td>Description</td>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    ID </td>
+   <td>Customer ID</td>
+</tr>
+ <tr>
+        <td>Age </td>
+        <td> Customer's age in completed years </td>
+    </tr>
+    <tr>
+        <td>Experience </td>
+        <td> years of professional experience </td>
+    </tr>
+    <tr>
+        <td>Income </td>
+        <td> Annual income of the customer ($000) </td>
+    </tr>
+    <tr>
+        <td>ZIPCode </td>
+        <td> Home Address ZIP code </td>
+    </tr>
+    <tr>
+        <td>Family </td>
+        <td> Family size of the customer </td>
+    </tr>
+    <tr>
+        <td>CCAvg </td>
+        <td> Avg. spending on credit cards per month ($000) </td>
+    </tr>
+    <tr>
+        <td>Education </td>
+        <td> Education Level (1: Undergrad; 2: Graduate; 3: Advanced/Professional) </td>
+    </tr>
+    <tr>
+        <td>Mortgage </td>
+        <td> Value of house mortgage if any ($000) </td>
+    </tr>
+    <tr>
+        <td>Personal Loan </td>
+        <td> Did this customer accept the personal loan offered in the last campaign? </td>
+    </tr>
+    <tr>
+        <td>Securities Account </td>
+        <td> Does the customer have a security account with the bank? </td>
+    </tr>
+    <tr>
+        <td>CD Account </td>
+        <td> Does the customer have a certificate of deposit (CD) account with the bank? </td>
+    </tr>
+    <tr>
+        <td>Online </td>
+        <td> Does the customer use internet banking facilities? </td>
+    </tr>
+    <tr>
+        <td>CreditCard </td>
+        <td> Does the customer uses a credit card issued by UniversalBank</td>
+    </tr>
+ </tbody>
+</table>
 
 ### Task
 
 The task i will be solving with this dataset is a classification task. The main goal of classification models is to predict which categories new data will fall into based on learnings from its training data. Therefore i will be using a classification model to predict the likelihood of a liability customer buying Personal Loan (Did this customer accept the personal loan offered in the last campaign).
-The features of the dataset are;
-Experience = years of professional experience, Income = Annual income of the customer ($000), Family = Family size of the customer, CCAvg = Avg. spending on credit cards per month ($000), Education = Education Level (1: Undergrad; 2: Graduate; 3: Advanced/Professional), Mortgage = Value of house mortgage if any ($000), Securities Account = Does the customer have a security account with the bank?, CD Account = Does the customer have a certificate of deposit (CD) account with the bank?, Online =  Does the customer use internet banking facilities?, CreditCard = Does the customer uses a credit card issued by UniversalBank.
-
-
-
 
 ### Access
 
