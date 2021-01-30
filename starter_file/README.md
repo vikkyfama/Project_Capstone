@@ -150,5 +150,7 @@ To query the endpoint with a sample input, firstly we go to the model endpoint a
 - Demo of the deployed  model
 - Demo of a sample request sent to the endpoint and its response
 
+https://youtu.be/9SSUb1Gsnu0
+
 ## Standout Suggestions
 *TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
